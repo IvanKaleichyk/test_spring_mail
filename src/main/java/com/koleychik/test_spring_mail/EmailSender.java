@@ -10,12 +10,9 @@ import org.springframework.stereotype.Service;
 public class EmailSender {
 
     private final JavaMailSender javaMailSender;
-    private final EmailConfig config;
 
     @Autowired
     public EmailSender(EmailConfig config) {
-        this.config = config;
-//        this.javaMailSender = javaMailSender;
         this.javaMailSender = config.getJavaMailSender();
     }
 
