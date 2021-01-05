@@ -13,7 +13,7 @@ public class EmailSender {
     private final EmailConfig config;
 
     @Autowired
-    public EmailSender(JavaMailSender javaMailSender, EmailConfig config) {
+    public EmailSender(EmailConfig config) {
         this.config = config;
 //        this.javaMailSender = javaMailSender;
         this.javaMailSender = config.getJavaMailSender();
